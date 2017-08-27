@@ -163,7 +163,11 @@ class BorderDrawer extends Component {
             })}
           </Absolute>
           <Absolute top left style={this.state.dimensions}>
-            <DrawArea onChange={this.onChange} points={this.state.points} />
+            <DrawArea
+              oneStroke
+              onChange={this.onChange}
+              points={this.state.points}
+            />
           </Absolute>
         </Relative>
         <Container py={10} style={{ textAlign: 'center' }}>

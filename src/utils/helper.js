@@ -54,19 +54,27 @@ const PADDING = 0.05;
 const projection = geoMercator();
 
 export const xyToLngLat = (dimensions, point, geoJson) => {
-  const paddingTop = dimensions.width * PADDING;
+  const paddingTop = dimensions.height * PADDING;
+  const paddingSide = dimensions.width * PADDING;
   return projection
     .fitExtent(
-      [[0, paddingTop], [dimensions.width, dimensions.height - paddingTop]],
+      [
+        [paddingSide, paddingTop],
+        [dimensions.width - paddingSide, dimensions.height - paddingTop]
+      ],
       geoJson
     )
     .invert(point);
 };
 
 export const lngLatToXy = (dimensions, lngLat, geoJson) => {
-  const paddingTop = dimensions.width * PADDING;
+  const paddingTop = dimensions.height * PADDING;
+  const paddingSide = dimensions.width * PADDING;
   const projectLngLat = projection.fitExtent(
-    [[0, paddingTop], [dimensions.width, dimensions.height - paddingTop]],
+    [
+      [paddingSide, paddingTop],
+      [dimensions.width - paddingSide, dimensions.height - paddingTop]
+    ],
     geoJson
   );
   return projectLngLat(lngLat);

@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@turf/turf": "^4.6.1",
+    "d3-geo": "^1.6.4",
+    "d3-geo-projection": "^2.2.0",
+    "gestyled": "^0.8.5",
+    "immutable": "^3.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11"
+    "react-scripts": "1.0.11",
+    "simplify-js": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

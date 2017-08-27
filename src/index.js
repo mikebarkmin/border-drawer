@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'gestyled';
 import './index.css';
 import BorderDrawer from './BorderDrawer';
@@ -9,12 +9,12 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <ThemeProvider>
-    <BrowserRouter>
+    <Router>
       <div>
         <Route path="/:borderName" component={BorderDrawer} />
         <Route exact path="/" component={Landing} />
       </div>
-    </BrowserRouter>
+    </Router>
   </ThemeProvider>,
   document.getElementById('root')
 );

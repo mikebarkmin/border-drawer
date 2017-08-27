@@ -2396,6 +2396,14 @@ concat-stream@^1.6.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
+concat-stream@~1.4.1:
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.4.10.tgz#acc3bbf5602cb8cc980c6ac840fa7d8603e3ef36"
+  dependencies:
+    inherits "~2.0.1"
+    readable-stream "~1.1.9"
+    typedarray "~0.0.5"
+
 configstore@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/configstore/-/configstore-2.1.0.tgz#737a3a7036e9886102aa6099e47bb33ab1aba1a1"
@@ -5200,6 +5208,10 @@ minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimist@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.7.tgz#dc4c620253c542eda0d2eb91c3c6a971a11e63e7"
+
 minimist@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
@@ -6365,6 +6377,15 @@ readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable
     string_decoder "~1.0.3"
     util-deprecate "~1.0.1"
 
+readable-stream@~1.1.9:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
+
 readdirp@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-2.1.0.tgz#4ed0ad060df3073300c48440373f72d1cc642d78"
@@ -6814,6 +6835,18 @@ simplicial-complex@^1.0.0:
   dependencies:
     bit-twiddle "^1.0.0"
     union-find "^1.0.0"
+
+simplify-geojson@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/simplify-geojson/-/simplify-geojson-1.0.3.tgz#4f9ed4f0f62be86d38526bcdcae072b0e9df5ef4"
+  dependencies:
+    concat-stream "~1.4.1"
+    minimist "0.0.7"
+    simplify-geometry "0.0.2"
+
+simplify-geometry@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/simplify-geometry/-/simplify-geometry-0.0.2.tgz#63797e676eae96835ace02bcd27d3e1af544f49c"
 
 simplify-js@^1.2.1:
   version "1.2.1"
@@ -7312,7 +7345,7 @@ type-is@~1.6.15:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
-typedarray@^0.0.6:
+typedarray@^0.0.6, typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 

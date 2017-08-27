@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import readline from 'readline';
 import sanitize from 'sanitize-filename';
-import simplify from 'simplify-js';
+import simplify from 'simplify-geojson';
 
 const r = readline.createInterface({
   input: process.stdin,
@@ -28,6 +28,14 @@ const convert = json => {
     fs.writeFile(
       `src/borders/${fileName}.json`,
       JSON.stringify(borderJSON),
+      'utf8',
+      err => {
+        console.log(err);
+      }
+    );
+    fs.writeFile(
+      `src/borders/simple-${fileName}.json`,
+      JSON.stringify(simplify(borderJSON)),
       'utf8',
       err => {
         console.log(err);

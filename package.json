@@ -5,13 +5,18 @@
   "private": true,
   "dependencies": {
     "@turf/turf": "^4.6.1",
+    "babel-cli": "^6.26.0",
+    "cross-env": "^5.0.5",
     "d3-geo": "^1.6.4",
     "d3-geo-projection": "^2.2.0",
     "gestyled": "^0.8.5",
     "immutable": "^3.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.11",
+    "sanitize-filename": "^1.6.1",
     "simplify-js": "^1.2.1"
   },
   "scripts": {
@@ -20,9 +25,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "downloadBorder": "cross-env BABEL_ENV=development babel-node --presets=react-app,env -- ./downloadBorder.js"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.0.0",
+    "node-fetch": "next"
   }
 }

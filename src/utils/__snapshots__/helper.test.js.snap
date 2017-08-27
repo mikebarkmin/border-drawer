@@ -2,7 +2,7 @@
 
 exports[`calcArea 1`] = `537021342724.8637`;
 
-exports[`calcSimilarity 1`] = `-51`;
+exports[`calcSimilarity 1`] = `0`;
 
 exports[`getBiggestPolygon 1`] = `
 Object {

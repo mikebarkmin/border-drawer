@@ -13,7 +13,7 @@ export const calcSimilarity = (points, realGeoJson, dimensions) => {
   );
   const realArea = Turf.area(realGeoJson);
   const similarity = Math.round((1 - diffArea / realArea) * 100);
-  return similarity;
+  return similarity > 0 ? similarity : 0;
 };
 
 export const getBiggestPolygon = userPolygon => {
